@@ -1,6 +1,8 @@
 import streamlit as st
 import functions
 
+# st.set_page_config(layout="wide")       # allows to set page configurations
+
 todos = functions.get_todos()       # It is better to define todos before the add_todo() function
 def add_todo():
     todo1 = st.session_state["new_todo"] + "\n"      # takes the new string from the St.input_text(key="new_todo")
@@ -9,7 +11,8 @@ def add_todo():
 
 st.title("My todo App")
 st.subheader("This a Web-App")
-st.write("This app is to increase your productivity")
+st.write("This app is to increase your <b>productivity</b>",
+         unsafe_allow_html=True)            # "unsafe_allow_html=True" enables the usage of html tags  | HTML is only allowed for write method
 # St.checkbox("Buy grocery.")
 
 for index, todo in enumerate(todos):
