@@ -10,7 +10,7 @@ def add_todo():
     functions.write_todos(todos)
 
 st.title("My todo App")
-st.subheader("This a Web-App")
+st.subheader("This is a Web-App")
 st.write("This app is to increase your <b>productivity</b>",
          unsafe_allow_html=True)            # "unsafe_allow_html=True" enables the usage of html tags  | HTML is only allowed for write method
 # St.checkbox("Buy grocery.")
